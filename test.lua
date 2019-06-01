@@ -49,16 +49,10 @@ local timeToMilliseconds = function(time)
 end
 
 local millisecondsToTime = function(ms)
-	local hour = math_floor(ms / 36e8 % 60) -- Using math.floor because lua 5.3 has int and double, and using %f would round it.
-	local min = math_floor(ms / 60000 % 60)
+	local min = math_floor(ms / 60000 % 60) -- Using math.floor because lua 5.3 has int and double, and using %f would round it.
 	local sec = math_floor(ms / 1000 % 60)
 	ms = math_floor(ms % 1000)
-
-	ms = string_format("%02d:%02d.%03d", math_floor(min), math_floor(sec), math_floor(ms))
-	if hour > 0 then
-		ms = string_format("%02d:", math_floor(hour)) .. ms
-	end
-	return ms
+	return string_format("%02d:%02d.%03d", min, sec, ms)
 end
 
 -- Extra data

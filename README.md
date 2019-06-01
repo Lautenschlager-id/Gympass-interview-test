@@ -11,6 +11,6 @@ local log = io.read() -- Digite o nome do arquivo no input
 do
   local file = io.open(log, 'r')
   log = file:read("*a")
-  log:close()
+  file:close()
 end
 ```

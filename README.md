@@ -1,4 +1,4 @@
-Olá.
+Olá!
 
 Optei pela linguagem Lua por ser extremamente leve e flexível!<br>
 Os comentários estão em inglês.
